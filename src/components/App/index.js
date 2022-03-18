@@ -1,6 +1,6 @@
 // == Import
 import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
+// import Footer from 'src/components/Footer';
 import Home from 'src/components/Home';
 import './style.scss';
 
@@ -10,12 +10,6 @@ function App() {
     <div className="app">
       <Header />
       <Home />
-      <Footer />
-     aezae
-     zaeaz
-     eaz
-     eazeazea
-     ea
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import homeLogo from 'src/assets/images/home-hero.png';
 import BlockContent from 'src/components/BlockContent';
+import Newsletter from 'src/components/Newsletter';
 
 import './style.scss';
 
@@ -13,6 +14,7 @@ export default function Home() {
           <a className="home__block__buttons__link">Faites-vous plaisir</a>
         </div>
       </div>
+      <Newsletter />
       <BlockContent />
     </div>
   );
