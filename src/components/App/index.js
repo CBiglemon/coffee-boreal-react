@@ -2,7 +2,7 @@
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import Home from 'src/components/Home';
-import './styles.css';
+import './style.scss';
 
 // == Composant
 function App() {
@@ -11,6 +11,11 @@ function App() {
       <Header />
       <Home />
       <Footer />
+     aezae
+     zaeaz
+     eaz
+     eazeazea
+     ea
     </div>
   );
 }

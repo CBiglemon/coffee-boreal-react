@@ -1,0 +1,29 @@
+.header {
+  width: 100%;
+  position: fixed;
+  padding: 2rem 0;
+
+
+  &__nav {
+    color:white;
+    max-width: 50%;
+    margin: 0 auto;
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--white-color);
+  
+      &__img {
+        width: 90px;
+        margin-bottom: 1.4rem;
+        margin-right: 2rem;
+      }
+
+      &__links {
+        display: flex;
+      }
+    }
+  }
+}
