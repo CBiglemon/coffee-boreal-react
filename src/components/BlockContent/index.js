@@ -1,18 +1,53 @@
+import PropTypes from 'prop-types';
+import { style } from 'glamor';
 import './style.scss';
 
-export default function BlockLeft() {
+export default function BlockLeft({
+  id, image, imageHover, subtitle, title, text, link,
+}) {
+  const styles = {
+    left__block__img: style({
+      backgroundImage: `url(${image})`,
+      backgroundPosition: 'center left',
+      backgroundSize: 'cover',
+      width: '50%',
+      transition: '0.2s ease-out',
+      ':hover': {
+        backgroundImage: `url(${imageHover})`,
+        transition: '0.2s ease-in',
+      },
+    }),
+  };
+
+  const isEven = (cardId) => {
+    if (cardId % 2 === 0) {
+      return true;
+    }
+    return false;
+  };
+
   return (
-    <div className="left__block">
-      <section className="left__block__img" />
+    <div className={isEven(id) ? 'left__block__reverse' : 'left__block'}>
+      <section className={styles.left__block__img} />
       <section className="left__block__block">
-        <span className="left__block__block__sub">L'histoire de nos</span>
-        <a className="left__block__block__title">Coffee Shops</a>
+        <span className="left__block__block__sub">{subtitle}</span>
+        <a className="left__block__block__title">{title}</a>
         <div className="left__block__block__separator" />
         <p className="left__block__block__text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda reprehenderit hic quis maxime officia, eos fuga rerum minus totam, reiciendis velit odit accusantium maiores ducimus eligendi consequuntur delectus soluta accusamus.
-          Quisquam odio vero saepe commodi vitae illo eligendi voluptas ex earum omnis repellat nam mollitia, iure numquam a libero, fuga ipsam magni esse facilis adipisci ducimus architecto! Voluptas, consectetur consequatur?
+          {text}
         </p>
+        <a>{link}</a>
       </section>
     </div>
   );
 }
+
+BlockLeft.propTypes = {
+  id: PropTypes.number.isRequired,
+  image: PropTypes.string.isRequired,
+  imageHover: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+};

@@ -4,7 +4,7 @@ import './style.scss';
 
 function Header() {
   const [navOpacity, setNavOpacity] = useState(false);
-  console.log(window.scrollY)
+
   const changeNavOpacity = () => {
     if (window.scrollY >= 20) {
       setNavOpacity(true);
